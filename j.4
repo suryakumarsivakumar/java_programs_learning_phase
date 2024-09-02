@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Surya {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter a number:");
+        int num = input.nextInt();
+        while (num < 1 || num > 10) {
+            System.out.println(num + "is not a number between 1 and 10.try again:");
+            num = input.nextInt();
+        }
+        System.out.println(num + "is a number between 1 and 10.");
+    }
+}
