@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        int num;
+        Scanner input =new Scanner(System.in);
+        do{
+            System.out.println("Enter a number between 1 and 10:");
+            num = input.nextInt();
+        }while(num<0 || num>10);
+        System.out.println(num + " is a number between 1 and 10");
+    }
+}
