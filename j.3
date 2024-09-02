@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Surya{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        says(input);
+    }
+        public static void says(Scanner input){
+            int num;
+            while(true){
+                System.out.println("enter a number:");
+                num= input.nextInt();
+                if(0<num && num<11) {
+                    System.out.println(num + "is a number between 1 and 10.");
+                    break;
+                }
+                else {
+                    System.out.println("is not a number between 1 and 10.try again.");
+                }
+            }
+        }
+
+
+    }
