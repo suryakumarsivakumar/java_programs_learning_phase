@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Surya {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int i;
+        for( i=0;i<=10;i++) {
+            if (i%2==0)
+                continue;
+            System.out.print(i + " ");
+        }
+    }
+}
