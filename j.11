@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Aa {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("enter a number:");
+        int n = input.nextInt();
+        int num = factorial(n);
+        System.out.println("factorial of the given number is:" + num);
+    }
+    public static int factorial(int n){
+        int count=1;
+        for(int i=1;i<=n;i++) {
+
+            count = count * i;
+        }
+        return count;
+
+    }
+}
