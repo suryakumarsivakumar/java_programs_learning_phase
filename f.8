@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Surya {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int fo=0,f1=1;
+        int f2;
+        System.out.println("enter the number:");
+        int n= input.nextInt();
+        for(int i=0;i<=n;i++){
+            System.out.println(fo);
+            f2=f1+fo;
+            fo=f1;
+            f1=f2;
+        }
+
+    }
+}
