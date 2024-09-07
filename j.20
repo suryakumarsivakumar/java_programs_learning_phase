@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Surya {
+    public static void main(String[] args) {
+       Scanner input= new Scanner(System.in);
+        System.out.println("enter a number:" );
+       int num= input.nextInt();
+       int max=num;
+       int min=num;
+       maxMin(input,num,max,min);
+    }
+    public static void maxMin(Scanner input,int num,int max,int min){
+        while(num>0){
+            if(num>max)
+                max=num;
+
+            if(num<min)
+                min=num;
+            System.out.println("enter a number (negative number to stop:");
+            num= input.nextInt();
+        }
+        System.out.println("Maximum number:" + max);
+        System.out.println("minimum number:"+min);
+    }
+}
