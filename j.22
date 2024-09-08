@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Surya {
+    public static void main(String[] args) {
+       Scanner input= new Scanner(System.in);
+       System.out.print("enter a number of any number of digits:" );
+       int num= input.nextInt();
+        int sum=0;
+       while(num!=0){
+           int a=num%10;
+           sum=sum+a;
+           num=num/10;
+       }
+        System.out.println("sum of the digits are:"+sum);
+
+
+    }
+}
