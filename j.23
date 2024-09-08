@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Aa {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.print("enter a string:");
+        String a= input.next();
+        int num=a.length();
+        for(int i =0;i<num;i++){
+            System.out.print(a.charAt(i)+" ");
+        }
+    }
+}
