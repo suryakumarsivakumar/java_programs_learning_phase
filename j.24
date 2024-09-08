@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Aa {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.print("enter a string: ");
+        String a= input.next();
+        int num=a.length();
+        String reverse="";
+        for(int i =num-1;i>=0;i--){
+            reverse=reverse.concat(String.valueOf((a.charAt(i))));
+
+        }
+        System.out.print("the revered string is: "+reverse);
+    }
+}
