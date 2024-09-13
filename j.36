@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("enter the type of ticket(Regular,VIP,Premium):");
+        String ticketType= input.nextLine();
+        System.out.println("enter the number of tickets you want:");
+        int num= input.nextInt();
+        double cost;
+        if(ticketType.equals("Regular")){
+            if(num>5){
+                cost=num*50*0.90;
+            }else {
+                cost = num * 50;
+            }
+        }else if(ticketType.equals("VIP")){
+            if(num>5){
+                cost=num*100*0.85;
+            }else {
+                cost = num * 100;
+            }
+        }else{
+            if(num>3){
+                cost=num*200*0.80;
+            }else {
+                cost = num * 150;
+            }
+        }
+        if(cost<200){
+            cost=cost+20;
+        }
+        System.out.println("enter the total cost:"+cost);
+    }
+}
