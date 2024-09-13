@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("enter the salary per hour:");
+        double salary= input.nextDouble();
+        System.out.println("enter the hours worked:");
+        int hours= input.nextInt();
+        System.out.println("enter the number of weeks worked:");
+        int weeks= input.nextInt();
+        if(hours>40){
+            int extra_Hours = hours-40;
+            double a=salary*40*weeks+salary*extra_Hours*weeks*1.5;
+            System.out.println(a);
+        }else if(weeks<20){
+            double b=salary*hours*weeks*0.90;
+            System.out.println(b);
+        }else{
+            double c=salary*hours*weeks;
+            System.out.println(c);
+        }
+    }
+}
