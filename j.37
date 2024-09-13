@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.print("enter any number:");
+        String string= input.nextLine();
+        int max=string.charAt(0)-'0';
+        int min=string.charAt(0)-'0';
+        int num=string.length();
+        for(int i=1;i<num;i++){
+            int current_String=string.charAt(i)-'0';
+            if(current_String>max)
+                max=current_String;
+            else if(current_String<min)
+                    min=current_String;
+        }
+        System.out.println("the largest digit is:"+max);
+        System.out.println("the smallest digit is:"+min);
+    }
+}
