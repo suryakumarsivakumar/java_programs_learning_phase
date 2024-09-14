@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Surya {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("enter a any day in a week:");
+        String a = input.nextLine();
+        switch (a){
+            case "monday":
+                System.out.println("it is a weekday");
+                break;
+            case "tuesday":
+                System.out.println("it is a weekday");
+                break;
+            case "wednesday":
+                System.out.println("it is a weekday");
+                break;
+            case "thrusday":
+                System.out.println("it is a weekday");
+                break;
+            case "friday":
+                System.out.println("it is a weekday");
+                break;
+            case "saturday":
+                System.out.println("it is a weekend");
+                break;
+            case "sunday":
+                System.out.println("it is a weekend");
+                break;
+            default:
+                System.out.println("invalid day entered");
+                break;
+
+        }
+
+    }
+}
