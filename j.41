@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Aa {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("enter a number:");
+        int num = input.nextInt();
+        int givenNumber = num;
+        int fact = 1;
+        int strongNumber = 0;
+        while (num > 0) {
+            int digit = num % 10;
+            fact = 1;
+
+            for (int i = digit; i > 0; i--) {
+                fact = fact * i;
+
+            }
+            strongNumber = strongNumber + fact;
+            num = num / 10;
+        }
+        if (strongNumber == givenNumber)
+            System.out.println("the given number is a strongNumber");
+        else
+            System.out.println("the given number is not a strongNumber");
+
+    }
+}
