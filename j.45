@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        sayHi();
+        System.out.println(sayHi("suryakumar"));
+    }
+    public static void sayHi(){
+        System.out.println("Hi");
+    }
+    public static String sayHi(String name){
+        return "Hi "+ name;
+    }
+
+}
