@@ -1,0 +1,23 @@
+import java.awt.*;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String name = getName(input);
+        int age = getAge(input);
+        System.out.println("the name is: " + name);
+        System.out.println("the age is: " + age);
+
+    }
+    public static String getName(Scanner input){
+
+        System.out.print("enter your name:");
+        return input.nextLine();
+    }
+    public static int getAge(Scanner input){
+
+        System.out.print("enter your age:");
+        return input.nextInt();
+    }
+}
