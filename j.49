@@ -1,0 +1,29 @@
+import java.awt.*;
+import java.util.Scanner;
+
+public class Surya {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.print("enter the starting number:");
+        int num1= input.nextInt();
+        System.out.print("enter the ending number:");
+        int num2= input.nextInt();
+        primeNumber(num1,num2);
+    }
+    public static void primeNumber(int a,int b){
+
+        for(int i=a;i<=b ;i++){
+            if(i<=1){
+                continue;
+            }
+            int j;
+            for (j= 2; j<=Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    break;
+                }
+            }if(j>Math.sqrt(i))
+                System.out.println(i);
+        }
+
+    }
+}
