@@ -1,0 +1,12 @@
+public class Surya {
+    public static void main(String[] args) {
+        char[] array={'1','2','3','4'};
+        System.out.println(array);
+        int[] arrays={1,2,3,4};
+        System.out.println(arrays);
+
+
+
+    }
+
+}
