@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class FIrst {
+    static int[] array = new int[20];
+    static int a=0;
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("enter a number of elements in the array:");
+        int n = input.nextInt();
+        num(n);
+        printArray(array);
+    }
+    public static void num(int n){
+        if(n>1 && n<=20){
+            for(int i=1;i<=n;i++) {
+                System.out.print("enter the element"+i+":");
+                Scanner input=new Scanner(System.in);
+                int num= input.nextInt();
+                addArray(num);
+            }
+        }else{
+            System.out.println("you should enter atleast one or lessthan 20 elements.");
+        }
+    }public static void addArray(int number){
+        if(a<array.length) {
+            array[a] = number;
+            a++;
+        }
+    }
+    public static void printArray(int[] num){
+        for(int i=0;i<a;i++){
+            System.out.println(num[i]);
+        }
+    }
+}
