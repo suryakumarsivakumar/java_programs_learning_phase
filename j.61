@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Surya {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("enter the number of elements in the array:");
+        int num= input.nextInt();
+        int[] array=new int[num];
+        fillArrayOfIntegers(array,num,input);
+        int max_element=printMaxElementOfArray(array,num);
+        int min_element=printMinElementOfArray(array,num);
+        System.out.println("the maximum element is: "+max_element+" the minimum element is: "+min_element);
+    }
+
+    private static int printMinElementOfArray(int[] array, int num) {
+        int min=array[0];
+        for(int i=1;i<num;i++){
+            if(array[i]<min)
+                min=array[i];
+        }
+        return min;
+
+    }
+
+    private static int printMaxElementOfArray(int[] array, int num) {
+        int max=array[0];
+        for(int i=1;i<num;i++){
+            if(array[i]>max)
+                max=array[i];
+        }
+        return max;
+    }
+
+
+    private static void fillArrayOfIntegers(int[] array, int num,Scanner input) {
+        System.out.print("enter the elemets of the array:");
+        for(int i=0;i<num;i++){
+            array[i]= input.nextInt();
+        }
+    }
+}
