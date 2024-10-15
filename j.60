@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Surya {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("enter the number of elements in the array:");
+        int num= input.nextInt();
+        int[] array=new int[num];
+        fillArrayOfIntegers(array,num,input);
+        System.out.print("enter the element you want to search:");
+        int search_num= input.nextInt();
+        int occurance=printCommonElementsInTheArray(search_num,num,array);
+        System.out.println(search_num+" occurs "+occurance+" times ");
+    }
+
+    private static int printCommonElementsInTheArray(int searchNum, int num, int[] array) {
+        int sum=0;
+        for(int i=0;i<num;i++){
+            if(array[i]==searchNum)
+                sum+=1;
+
+        }
+        return sum;
+    }
+
+    private static void fillArrayOfIntegers(int[] array, int num,Scanner input) {
+        System.out.print("enter the elemets of the array:");
+        for(int i=0;i<num;i++){
+            array[i]= input.nextInt();
+        }
+    }
+}
