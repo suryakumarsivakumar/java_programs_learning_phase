@@ -1,0 +1,37 @@
+public class FIrst {
+    public static void main(String[] args) {
+        int[][] array = {{1, 2, 3}, {4, 5, 6}};
+        maxInRowsIn2DArray(array);
+        maxInColumnsIn2DArray(array);
+
+    }
+
+    private static void maxInColumnsIn2DArray(int[][] array) {
+        System.out.println("COLUMN WISE MAXIMUM");
+        for (int i = 0; i < array[0].length; i++) {
+            int max = array[0][0];
+            for (int j = 0; j < array.length; j++) {
+                if (max < array[j][i])
+                    max = array[j][i];
+            }
+            System.out.println("the maximum element in column" + (i + 1) + "is:" + max);
+        }
+    }
+
+    private static void maxInRowsIn2DArray(int[][] array) {
+        System.out.println("ROW WISE MAXIMUM");
+        for (int i = 0; i < array.length; i++) {
+            int max = array[i][0];
+            for (int j = 0; j < array[i].length; j++) {
+                if (max < array[i][j])
+                    max = array[i][j];
+            }
+            System.out.println("the maximum element in row" + (i + 1) + "is:" + max);
+        }
+
+
+    }
+
+
+
+}
