@@ -1,0 +1,11 @@
+public class Surya {
+    public static void main(String[] args) {
+        int[] arr={5,4,3,2};
+        int i=0;
+
+        for(int array:arr){
+            System.out.println(array+" "+i++);
+
+        }
+    }
+}
