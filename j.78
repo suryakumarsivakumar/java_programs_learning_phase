@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        Outer outer = new Outer();
+        
+        outer.demo();
+    }
+}
+public class Outer{
+    private int outerX;
+    class Inner{
+        public int innerX;
+        void showX(){
+            System.out.println(outerX+" "+innerX);
+        }
+    }
+    public void demo(){
+        Inner inner=new Inner();
+        inner.innerX=3;
+        inner.showX();
+    }
+}
