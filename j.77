@@ -1,0 +1,55 @@
+import java.awt.*;
+import java.util.*;
+
+public class Surya {
+    public static void main(String[] args) {
+        Circle c1=new Circle(new Point(1,2),5);
+        System.out.println(Circle.getNoOfCircles());
+        Circle c2 = new Circle();
+        System.out.println(c2.getRadius());
+        c2.setRadius(-4);
+        System.out.println(c2.getRadius());
+        System.out.println(c2.getNoOfCircles());
+
+
+    }
+}
+import java.awt.*;
+
+public class Circle {
+    Point center;
+    private double radius;
+    private static int noOfCircles;
+    public double getRadius(){
+        return radius;
+    }
+    public void setRadius(double radius){
+        this.radius=(radius>=0)?radius:0;
+    }
+
+
+    Circle(){
+        this(new Point(1,1),1);
+
+    }
+    Circle(Point center,double radius){
+        this.center=center;
+        setRadius(radius);
+        noOfCircles++;
+    }
+    public double getPerimeter(){
+        return 2*Math.PI*this.radius;
+    }
+    public double getArea(){
+        return Math.PI*this.radius*this.radius;
+    }
+    public void newcenter(Point newcenter){
+        this.center=newcenter;
+    }
+    public void newradius(double newradius){
+        this.radius=newradius;
+    }
+    static int getNoOfCircles(){
+        return noOfCircles;
+    }
+}
