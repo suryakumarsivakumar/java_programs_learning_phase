@@ -1,0 +1,17 @@
+public class Test {
+    int x;
+    public void setX(int x){
+        this.x=x;
+    }
+    public int getX(){
+        return this.x;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Test t1;
+        t1 = new Test();
+        t1.setX(10);
+        System.out.println(t1.getX());
+    }
+}
